@@ -1,0 +1,57 @@
+$primary:#FF00FF;
+$primary2:#ff00ff86;
+$secondary:#27374D;
+$legendary:rgb(255, 238, 0) ;
+@mixin flex($justify:center,$align:center,$dir:row){
+        display: flex;
+        justify-content:$justify;
+        align-items: $align;
+        flex-direction: $dir;
+}
+@mixin move($value:3em){
+        @keyframes move {
+                0%{
+                    transform: translateY(-$value);
+                    transition: transform .5s;
+                }
+                50%{
+                    transform: translateY($value);
+                    transition: transform .5s;
+                }
+                100%{
+                    transform: translateY(-$value);
+                    transition: transform .5s;
+                }          
+            }
+} 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+
+    scrollbar-width: auto;
+    scrollbar-color:  $primary2 $secondary;
+    transition: all .5s;
+  }
+  *:hover{
+    scrollbar-color:  $primary $secondary;
+    transition: all .5s;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $secondary;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $primary2;
+    border-radius: 15px;
+    border: 3px none #ffffff;
+  }
+  *::-webkit-scrollbar-thumb:hover{
+    background-color: $primary;
+    transition: background-color .5s;
+  }
