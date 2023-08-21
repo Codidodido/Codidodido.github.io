@@ -53,6 +53,17 @@ body {
   background-color: #27374D;
 }
 
+h1.section-title {
+  color: #fff;
+  border-bottom: 5px solid #ffee00;
+  font-size: 3em;
+  transition: all .5s;
+}
+
+h1.section-title:hover {
+  letter-spacing: .2em;
+}
+
 nav#nav {
   position: fixed;
   display: flex;
@@ -440,117 +451,6 @@ section#Portfolio article.container div.contain div.card div.link-container a:ho
   transition: all .5s;
 }
 
-@media screen and (max-width: 1000px) {
-  nav#nav {
-    height: 5em;
-    transition: height .5s;
-  }
-  nav#nav div.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    min-height: 100%;
-    overflow: hidden;
-    padding: 0;
-    padding-inline: 1em;
-  }
-  nav#nav div.menu ul {
-    display: none;
-  }
-  nav#nav div.menu div.logo {
-    margin-left: .5em;
-    font-size: 3em;
-  }
-  nav#nav div.menu div.togglemenu {
-    display: block;
-    width: auto;
-    height: auto;
-    margin-left: .5em;
-  }
-  nav#nav div.menu div.togglemenu i {
-    color: #fff;
-    font-size: 2em;
-  }
-  section.banner {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-  }
-  section.banner article {
-    width: 100%;
-    height: auto;
-  }
-  section.banner article div {
-    max-width: 300px;
-    height: 300px;
-  }
-  section.banner article.Content h2 {
-    font-size: 1.5em;
-  }
-  nav#nav.Open {
-    height: 520px;
-  }
-  nav#nav.Open div.menu {
-    padding: 1em;
-    transition: height .5s;
-  }
-  nav#nav.Open div.menu ul {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    row-gap: 1.5em;
-  }
-  nav#nav.Open div.menu ul li {
-    width: 100%;
-  }
-  nav#nav.Open div.menu ul li a {
-    width: 100%;
-  }
-  nav#nav.Open div.menu ul li.active {
-    background-color: #FF00FF;
-  }
-  section#AboutMe {
-    min-height: Auto;
-  }
-  section#AboutMe article.Container {
-    align-items: center;
-    justify-content: space-evenly;
-    height: auto;
-    row-gap: 1em;
-  }
-  section#AboutMe article.Container h1 {
-    position: relative;
-    font-size: 1.5em;
-  }
-  section#AboutMe article.Container div.Cover {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0;
-  }
-  section#AboutMe article.Container div.content {
-    position: relative;
-    width: 90%;
-    min-height: 182px;
-  }
-  section#AboutMe article.Container div.content p {
-    width: 100%;
-  }
-  section#Experience div.experience {
-    flex-direction: column !important;
-  }
-  section#Experience div.experience div.logos {
-    width: 10em;
-    height: 10em;
-  }
-}
-
 section#MySkill {
   width: 100%;
   min-height: 40em;
@@ -767,7 +667,19 @@ section#Experience {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: .5em;
+}
+
+section#Experience h1.section-title {
+  color: #fff;
+  border-bottom: 5px solid #ffee00;
+  font-size: 3em;
+  transition: all .5s;
+}
+
+section#Experience h1.section-title:hover {
+  letter-spacing: .2em;
 }
 
 section#Experience article.experience-container {
@@ -845,11 +757,17 @@ section#Galary {
   width: 100%;
   height: auto;
   padding: 1em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1em;
 }
 
 section#Galary article.video-container {
   width: 100%;
-  height: 80%;
+  min-height: auto;
   background-color: #ffee00;
   display: flex;
   justify-content: center;
@@ -859,41 +777,113 @@ section#Galary article.video-container {
 }
 
 section#Galary article.video-container nav.videos-list {
-  width: 20%;
-  height: 100%;
-  overflow: hidden;
+  width: 30%;
+  max-height: auto;
+  overflow-y: auto;
 }
 
 section#Galary article.video-container nav.videos-list ul {
   width: 100%;
-  height: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+  max-height: auto;
+  list-style: none;
+  padding: .5em;
 }
 
 section#Galary article.video-container nav.videos-list ul li {
-  width: 100%;
-  height: 5em;
-  margin: 1em;
+  position: relative;
+  width: auto;
+  max-height: 5em;
+  margin-top: .5em;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 1em;
+  transition: all .5s;
+  transition-delay: all .5s;
 }
 
-section#Galary article.video-container nav.videos-list ul li video {
+section#Galary article.video-container nav.videos-list ul li div.cover {
+  width: 50%;
+  height: 5em;
+  overflow: hidden;
+  border-radius: 1em 0 0 1em;
+  transform-origin: left;
+  transition: all .5s;
+  transition-delay: all .5s;
+}
+
+section#Galary article.video-container nav.videos-list ul li div.cover video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+section#Galary article.video-container nav.videos-list ul li div.cover:hover {
+  cursor: pointer;
+}
+
+section#Galary article.video-container nav.videos-list ul li div.content {
+  width: 50%;
+  height: 100%;
+  padding-left: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all .5s;
+  transition-delay: all .5s;
+}
+
+section#Galary article.video-container nav.videos-list ul li div.content h3 {
+  color: #27374D;
+}
+
+section#Galary article.video-container nav.videos-list ul li div.content h5 {
+  color: #27374D;
+}
+
+section#Galary article.video-container nav.videos-list ul li:hover {
+  box-shadow: 0 0 10px #27374D;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+section#Galary article.video-container nav.videos-list ul li:hover div.cover {
+  width: 100%;
+  border-radius: 1em;
+  transform-origin: left;
+  transition: all .5s;
+}
+
+section#Galary article.video-container nav.videos-list ul li:hover div.content {
+  opacity: 0;
+  display: none;
+  transition-delay: .5s;
+  transition: all .5s;
 }
 
 section#Galary article.video-container div.video-selected {
-  width: 80%;
-  height: 100%;
+  width: 70%;
+  height: 30em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-section#Galary article.video-container div.video-selected video {
-  width: 80%;
-  height: 70%;
+section#Galary article.video-container div.video-selected div.videoframe {
+  width: 50%;
+  height: auto;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+section#Galary article.video-container div.video-selected div.videoframe video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 section#Galary article.video-container div.video-selected div.content {
@@ -903,5 +893,368 @@ section#Galary article.video-container div.video-selected div.content {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  padding-left: 1em;
+}
+
+section#Galary article.video-container div.video-selected div.content h3, section#Galary article.video-container div.video-selected div.content p {
+  color: #27374D;
+}
+
+section#Certificate {
+  width: 100%;
+  min-height: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section#Certificate article.certificate-container {
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+
+section#Certificate article.certificate-container div.certificate {
+  max-width: 20em;
+  height: auto;
+  background-color: #fff;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1em;
+  overflow: hidden;
+}
+
+section#Certificate article.certificate-container div.certificate div.certi-cover {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+section#Certificate article.certificate-container div.certificate div.certi-cover img {
+  width: 100%;
+  object-fit: cover;
+}
+
+section#Certificate article.certificate-container div.certificate div.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+section#Certificate article.certificate-container div.certificate div.content h3.certi-title {
+  color: #27374D;
+}
+
+section#Certificate article.certificate-container div.certificate:hover {
+  background-image: linear-gradient(45deg, #FF00FF, #ffee00);
+  cursor: pointer;
+}
+
+section#Certificate article.certificate-container div.certificate:hover div.content h3.certi-title {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #1e2b3c;
+}
+
+footer div.message-container {
+  width: 50%;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+footer div.message-container form {
+  width: 50%;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: .5em;
+  background-color: #FF00FF;
+  border-radius: .4em;
+}
+
+footer div.message-container form h2 {
+  color: #fff;
+}
+
+footer div.message-container form input {
+  width: 100%;
+  height: 2.5em;
+  border: none;
+  outline: none;
+  color: #27374D;
+  background-color: #fff;
+  border-radius: .5em;
+  padding-left: .5em;
+}
+
+footer div.message-container form button {
+  width: 50%;
+  height: 3em;
+  color: #27374D;
+  font-weight: 600;
+  border: none;
+  border-radius: .4em;
+  background-color: #ffee00;
+}
+
+footer div.message-container form button:hover {
+  background-color: #e6d600;
+  cursor: pointer;
+}
+
+footer div.message-container form ::placeholder {
+  color: black;
+}
+
+footer div.message-container form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #27374D;
+  background-color: #fff;
+  border-radius: .5em;
+  padding: .5em;
+  resize: none;
+}
+
+footer div.socialMedia {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+
+footer div.socialMedia a.social {
+  text-decoration: none;
+  width: 4em;
+  height: 4em;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: .4em;
+}
+
+footer div.socialMedia a.social i {
+  object-fit: cover;
+  font-size: 3em;
+  color: #27374D;
+}
+
+footer div.socialMedia a.social:hover {
+  background: var(--clr);
+}
+
+footer div.socialMedia a.social:hover i {
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  nav#nav {
+    height: 5em;
+    transition: height .5s;
+  }
+  nav#nav div.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 0;
+    padding-inline: 1em;
+  }
+  nav#nav div.menu ul {
+    display: none;
+  }
+  nav#nav div.menu div.logo {
+    margin-left: .5em;
+    font-size: 3em;
+  }
+  nav#nav div.menu div.togglemenu {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: .5em;
+  }
+  nav#nav div.menu div.togglemenu i {
+    color: #fff;
+    font-size: 2em;
+  }
+  section.banner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  section.banner article {
+    width: 100%;
+    height: auto;
+  }
+  section.banner article div {
+    max-width: 300px;
+    height: 300px;
+  }
+  section.banner article.Content h2 {
+    font-size: 1.5em;
+  }
+  nav#nav.Open {
+    height: 520px;
+  }
+  nav#nav.Open div.menu {
+    padding: 1em;
+    transition: height .5s;
+  }
+  nav#nav.Open div.menu ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 1.5em;
+  }
+  nav#nav.Open div.menu ul li {
+    width: 100%;
+  }
+  nav#nav.Open div.menu ul li a {
+    width: 100%;
+  }
+  nav#nav.Open div.menu ul li.active {
+    background-color: #FF00FF;
+  }
+  section#AboutMe {
+    min-height: Auto;
+  }
+  section#AboutMe article.Container {
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    row-gap: 1em;
+  }
+  section#AboutMe article.Container h1 {
+    position: relative;
+    font-size: 1.5em;
+  }
+  section#AboutMe article.Container div.Cover {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+  }
+  section#AboutMe article.Container div.content {
+    position: relative;
+    width: 90%;
+    min-height: 182px;
+  }
+  section#AboutMe article.Container div.content p {
+    width: 100%;
+  }
+  section#Experience div.experience {
+    flex-direction: column !important;
+  }
+  section#Experience div.experience div.logos {
+    width: 10em;
+    height: 10em;
+  }
+  section#Galary article.video-container {
+    flex-direction: column-reverse;
+  }
+  section#Galary article.video-container nav.videos-list {
+    width: 100%;
+    height: 30%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  section#Galary article.video-container nav.videos-list ul {
+    min-width: 90em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: .5em;
+  }
+  section#Galary article.video-container nav.videos-list ul li {
+    min-width: 20em;
+  }
+  section#Galary article.video-container div.video-selected {
+    width: 100%;
+  }
+  section#Galary article.video-container div.video-selected div.videoframe {
+    width: 80%;
+  }
+  section#Services div.face-1:hover {
+    transform: translateY(0) !important;
+    transition: all .5s;
+    opacity: 0;
+  }
+  section#Services div.face-1:hover ~ div.face-2 {
+    transform: translateY(0) !important;
+    border-radius: 1em !important;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    margin-top: 5em;
+  }
+  footer div.message-container {
+    width: 100%;
+  }
+  footer div.socialMedia {
+    width: 100%;
+  }
+  footer div.socialMedia a.social {
+    width: 3em;
+    height: 3em;
+  }
+  footer div.socialMedia a.social i {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer div.message-container {
+    width: 100%;
+  }
+  footer div.message-container form {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

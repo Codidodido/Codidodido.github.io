@@ -17,7 +17,15 @@ body{
     height: 100vh;
     background-color:$secondary;
 }
-
+h1.section-title{
+    color: #fff;
+    border-bottom: 5px solid $legendary;
+    font-size: 3em;
+    transition: all .5s;
+}
+h1.section-title:hover{
+    letter-spacing: .2em;
+}
 nav#nav {
     position: fixed;
     @include flex();
@@ -301,120 +309,6 @@ section#Portfolio{
      
     }
 }
-
-
-
-//media query
-@media screen and (max-width:1000px){
-    nav#nav{
-        height:5em;
-        div.menu{
-            @include flex(space-between,center,row-reverse);
-            flex-wrap: wrap;
-            min-height:100%;
-            overflow: hidden;
-            padding:0; 
-            padding-inline: 1em;
-    
-            ul{
-               display: none;
-            }
-            div.logo{
-                margin-left: .5em;
-                font-size: 3em;
-            }
-            div.togglemenu{
-                display: block;
-                width: auto;
-                   height: auto;
-                margin-left: .5em;
-                i{
-
-                    color: #fff;
-                    font-size: 2em;
-                }
-            }
-        }
-        transition: height .5s;
-     
-    }
-    section.banner{
-        @include flex(space-evenly,center,column);
-        article{
-            width: 100%;
-            height: auto;
-            div{
-                max-width: 300px;
-                height: 300px;
-            }
-           
-        } 
-        article.Content h2{
-                font-size: 1.5em;
-            }
-    }
-    nav#nav.Open{
-         height:520px;
-      div.menu {
-        padding:1em;
-           ul{
-        width: 100%;
-        height:auto;
-        @include flex(center,flex-start,column);
-       row-gap: 1.5em;
-       li{
-        width: 100%;
-        a{
-            width: 100%;
-        }
-       }
-    li.active{
-      background-color: $primary;
-    }
-    }
-        transition: height .5s;
-    
-    }
-}
-section#AboutMe{
-    min-height:Auto;
-        article.Container{
-            align-items: center;
-            justify-content: space-evenly;
-            height: auto;
-            row-gap: 1em;
-            h1{
-                position: relative;
-                font-size: 1.5em;
-            }
-            div.Cover{
-                position:relative;
-                width: 300px;
-                height:300px;
-                margin: 0;
-            }
-            div.content{
-                position: relative;
-                width:90%;
-                min-height:182px;
-                p{
-                    width: 100%;
-                }
-                
-            }
-        }
-   
-}
-section#Experience{
-    div.experience{
-        flex-direction: column !important;
-        div.logos{
-            width:10em;
-            height:10em;
-        }
-    }
-}
-}
 section#MySkill{
     width: 100%;
     min-height:40em;
@@ -583,7 +477,17 @@ section#Experience{
     width:100%;
     height: auto;
     padding: 1em;
-    @include flex();
+    @include flex(center,center,column);
+    row-gap: .5em;
+    h1.section-title{
+        color: #fff;
+        border-bottom: 5px solid $legendary;
+        font-size: 3em;
+        transition: all .5s;
+    }
+    h1.section-title:hover{
+        letter-spacing: .2em;
+    }
  article.experience-container{
     width: 100%;
     height: auto;
@@ -644,44 +548,431 @@ section#Galary{
     width: 100%;
     height: auto;
     padding: 1em;
+    margin-top: 2em;
+    @include flex(center,center,column);
+    row-gap: 1em;
+   
     article.video-container{
         width: 100%;
-        height: 80%;
+        min-height:auto;
         background-color: $legendary;
-        @include flex();
+        @include flex(center,center,row);
         padding: 1em;
         nav.videos-list{
-            width:20%;
-            height: 100%;
-            overflow: hidden;
+            width:30%;
+            max-height:auto;
+          overflow-y: auto;
             ul{
                 width: 100%;
-                height: auto;
-              overflow-y: auto;
-              overflow-x: hidden;
+                max-height:auto;
+       
+              list-style: none;
+              padding: .5em;
               li{
-                width: 100%;
-                height:5em;
-                margin: 1em;
-                video{
+                position: relative;
+                width:auto;
+                max-height:5em;
+                margin-top: .5em;
+                background-color:#fff;
+                @include flex();
+                border-radius: 1em;
+                transition: all .5s;
+                transition-delay: all .5s;
+                div.cover{
+
+                    width:50%;
+                    height:5em;
+                    overflow: hidden;
+                    border-radius: 1em 0 0 1em;
+                    transform-origin: left;
+                    transition: all .5s;
+                    transition-delay: all .5s;
+                      video{
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
+                }
+                }
+                div.cover:hover{
+                    cursor:pointer;
+                }
+                div.content{
+                    width: 50%;
+                    height: 100%;
+                    padding-left: .5em;
+                    @include flex(center,flex-start,column);
+                    transition: all .5s;
+                    transition-delay: all .5s;
+                    h3{
+                        color: $secondary;
+                    }
+                    h5{
+                        color: $secondary;
+                    }
+                }
+              
+              }
+              li:hover{
+            
+                box-shadow: 0 0 10px $secondary;
+                cursor: pointer;
+                overflow: hidden;
+                div.cover{
+                    width: 100%;
+                    border-radius: 1em;
+                    transform-origin: left;
+                    transition: all .5s;
+                }
+                div.content{
+                   opacity:0;
+                   display: none;
+                    transition-delay: .5s;
+                    transition: all .5s;
                 }
               }
             }
         }
         div.video-selected{
-            width: 80%;
-            height: 100%;
+            width:70%;
+            height:30em;
             @include flex(center,center,column);
-            video{
-                width: 80%;
-                height: 70%;
+            div.videoframe{
+                width: 50%;
+                height:auto;
+                border-radius: 1em;
+                overflow: hidden;
+                   video{
+                width:100%;
+                height:auto;
+                object-fit: cover;
+            }
+            }
+         
+            div.content{
+                width:100%;
+                height:auto;
+                @include flex(center,flex-start,column);
+                padding-left: 1em;
+                h3,p{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+section#Certificate{
+    width: 100%;
+    min-height: 30em;
+    @include flex(center,center,column);
+    article.certificate-container{
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        @include flex();
+        flex-wrap: wrap;
+        gap: .5em;
+        div.certificate{
+            max-width:20em;
+            height: auto;
+            background-color: #fff;
+            border-radius: 1em;
+            @include flex(center,flex-start,column);
+            padding: 1em;
+            overflow: hidden;
+            div.certi-cover{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                img{
+                    width:100%;
+                    object-fit:cover;
+                }
             }
             div.content{
                 width: 100%;
                 height: auto;
-                @include flex(center,flex-start,column);
+                @include flex();
+                h3.certi-title{
+                    color: $secondary;
+
+                }
+            }
+        }
+        div.certificate:hover{
+            background-image:linear-gradient(45deg,$primary,$legendary);
+            cursor: pointer;
+         div.content {
+               h3.certi-title{
+                color: #fff;
+            }
+         }
+       
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: auto;
+    @include flex();
+    background-color: darken($color:$secondary, $amount: 5);
+    div.message-container{
+        width:50%;
+        height: auto;
+        padding: 1em;
+        @include flex();
+        form{
+        width:50%;
+        height: auto;
+        padding: 1em;
+        @include flex(center,center,column);
+        row-gap:.5em;
+        background-color:$primary;
+        border-radius: .4em;
+        h2{
+            color: #fff;
+        }
+        input{
+            width:100%;
+            height: 2.5em;
+            border: none;
+            outline: none;
+            color: $secondary;
+            background-color:#fff;
+            border-radius: .5em;
+            padding-left: .5em;
+        }
+        button{
+            width: 50%;
+            height: 3em;
+            color:$secondary;
+            font-weight:600;
+            border: none;
+            border-radius: .4em;
+            background-color: $legendary;
+        }
+        button:hover{
+            background-color: darken($color: $legendary, $amount: 5);
+            cursor: pointer;
+        }
+        ::placeholder{
+            color: rgba($color: #000, $alpha: 5.0);
+        }
+        textarea{
+            width:100%;
+            border: none;
+            outline: none;
+            color: $secondary;
+            background-color:#fff;
+            border-radius: .5em;
+            padding: .5em;
+            resize: none;
+        }
+        }
+       
+    }
+     div.socialMedia{
+            width: 50%;
+            height: auto;
+            @include flex();
+            column-gap: 1em;
+            flex-wrap: wrap;
+            a.social{
+                text-decoration: none;
+                width: 4em;
+                height: 4em;
+                background-color:#fff;
+               @include flex();
+             border-radius: .4em;
+       
+             
+                i{
+                    object-fit: cover;
+                    font-size: 3em;
+                    color:$secondary;
+
+                }
+            }
+            a.social:hover{
+                background:var(--clr);
+                i{
+                    color:#fff;
+                }
+            }
+        }
+}
+//media query
+@media screen and (max-width:1000px){
+    nav#nav{
+        height:5em;
+        div.menu{
+            @include flex(space-between,center,row-reverse);
+            flex-wrap: wrap;
+            min-height:100%;
+            overflow: hidden;
+            padding:0; 
+            padding-inline: 1em;
+    
+            ul{
+               display: none;
+            }
+            div.logo{
+                margin-left: .5em;
+                font-size: 3em;
+            }
+            div.togglemenu{
+                display: block;
+                width: auto;
+                   height: auto;
+                margin-left: .5em;
+                i{
+
+                    color: #fff;
+                    font-size: 2em;
+                }
+            }
+        }
+        transition: height .5s;
+     
+    }
+    section.banner{
+        @include flex(space-evenly,center,column);
+        article{
+            width: 100%;
+            height: auto;
+            div{
+                max-width: 300px;
+                height: 300px;
+            }
+           
+        } 
+        article.Content h2{
+                font-size: 1.5em;
+            }
+    }
+    nav#nav.Open{
+         height:520px;
+      div.menu {
+        padding:1em;
+           ul{
+        width: 100%;
+        height:auto;
+        @include flex(center,flex-start,column);
+       row-gap: 1.5em;
+       li{
+        width: 100%;
+        a{
+            width: 100%;
+        }
+       }
+    li.active{
+      background-color: $primary;
+    }
+    }
+        transition: height .5s;
+    
+    }
+}
+section#AboutMe{
+    min-height:Auto;
+        article.Container{
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            row-gap: 1em;
+            h1{
+                position: relative;
+                font-size: 1.5em;
+            }
+            div.Cover{
+                position:relative;
+                width: 300px;
+                height:300px;
+                margin: 0;
+            }
+            div.content{
+                position: relative;
+                width:90%;
+                min-height:182px;
+                p{
+                    width: 100%;
+                }
+                
+            }
+        }
+   
+}
+section#Experience{
+    div.experience{
+        flex-direction: column !important;
+        div.logos{
+            width:10em;
+            height:10em;
+        }
+    }
+}
+section#Galary{
+    article.video-container{
+        flex-direction: column-reverse;
+       nav.videos-list{
+        width: 100%;
+        height: 30%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        ul{
+            min-width:90em;
+            @include flex();
+            column-gap: .5em;
+            li{
+               min-width:20em;
+            }
+        }
+       }
+       div.video-selected{
+        width: 100%;
+        div.videoframe{
+            width: 80%;
+        }
+       }
+    }
+}
+section#Services{
+    div.face-1:hover{
+        transform: translateY(0) !important;
+        transition: all .5s;
+        opacity: 0;
+    }
+    div.face-1:hover~div.face-2{
+        transform: translateY(0) !important;
+        border-radius: 1em !important;
+       // transition: all .5s;
+    }
+}
+footer{
+    @include flex(center,center,column);
+    padding: 1em;
+    margin-top:5em;
+    div.message-container{
+        width: 100%;
+    }
+    div.socialMedia{
+        width: 100%;
+        a.social{
+               width: 3em;
+        height: 3em; 
+        i{
+            font-size: 2em;
+        }
+        }
+    
+    }
+}
+}
+@media screen and (max-width:600px){
+    footer{
+        div.message-container{
+            width: 100%;
+            form{
+                width: 100%;
             }
         }
     }

@@ -312,7 +312,7 @@ Experience.forEach((el) => {
    exToDate[exIndex].innerHTML += el.to_date;
    exIndex++;
 });
-CloneMaker("videos-cover","videos",4);
+CloneMaker("videos-cover","videos",3);
 var videos = [
   {
     video_source:"video/MyRecord_20230726180641.mp4",
@@ -339,24 +339,60 @@ var videos = [
     video_poster:"img/Portfolio-1.jpg",
   },
 ]
-function setvideo(id)
-{
-//var source = video_cover.on
-videosource.setAttribute("src",el.video_source);
-video_title.innerHTML = el.video_title;
-descrip_video.innerHTML = ;
-}
+
 var video_cover = document.querySelectorAll(".video-cover");
 var video_title = document.querySelector(".video-title");
 var descrip_video = document.querySelector(".descrip-video");
-var videosource = document.querySelector(".video-source");
+var cover_title = document.querySelectorAll(".cover-title");
+var cover_description = document.querySelectorAll(".cover-description");
 var videoIndex = 0;
 videos.forEach((el) => {
   video_cover[videoIndex].setAttribute("poster",el.video_poster);
   video_cover[videoIndex].setAttribute("id","id" + videoIndex);
   video_cover[videoIndex].setAttribute("src",el.video_source);
+  cover_title[videoIndex].innerHTML = el.video_title;
+  cover_description[videoIndex].innerHTML  = el.video_des;
   video_cover[videoIndex].addEventListener("click",function(){
-    
+    video_title.innerHTML = el.video_title;
+    descrip_video.innerHTML = el.video_des;
   })
   videoIndex++;
 })
+CloneMaker("certificate","certi-container",3);
+var certificates = [
+  {
+    title:"Certificate",
+    imgLocation:"img/download.png",
+  },
+  {
+    title:"unity",
+    imgLocation:"img/unity_cert_new.jpg",
+  },
+  {
+    title:"php",
+    imgLocation:"img/download.png",
+  },
+  {
+    title:"c#",
+    imgLocation:"img/unity_cert_new.jpg",
+  },
+]
+
+var certificate = document.querySelectorAll(".certificate");
+var certTitle = document.querySelectorAll(".certi-title");
+var certImg = document.querySelectorAll(".certi-img");
+let index = 0;
+certImg.forEach((img) => {
+  certImg[index].setAttribute("id",index + "img");
+  index++;
+})
+var certiIndex = 0;
+certificates.forEach((el) => {
+certTitle[certiIndex].innerHTML = el.title;
+certImg[certiIndex].setAttribute("src",el.imgLocation);
+certiIndex++;
+})
+function enlarg(id){
+  var url = document.getElementById(id).getAttribute("src");
+  window.open(url,'image','width=80em,height=auto','resizable=1');
+}
