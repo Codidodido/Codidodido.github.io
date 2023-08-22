@@ -118,39 +118,25 @@ hiddenElement.forEach((el) => observer.observe(el));
 /////////////////////////////////portfolio start
 var Portfolio = [
   {
-    imgLocation:'img/portfolio-1.jpg',
+    imgLocation:'img/BlockBreaker.jpg',
     title:'BlockBreaker',
     Description:'BlockBreaker is a game that you should break block with ball ,tho game is on autoplay mode'
   },
   {
-    imgLocation:'img/portfolio-2.jpg',
+    imgLocation:'img/BallRun.jpg',
     title:'Ballrun',
     Description:'you should run up on the wall and does not hit the shackle'
   },
   {
-    imgLocation:'img/portfolio-1.jpg',
-    title:'BlockBreaker',
+    imgLocation:'img/LaserDefender.jpg',
+    title:'Laser Defender',
     Description:'BlockBreaker is a game that you should break block with ball ,tho game is on autoplay mode'
   },
-  {
-    imgLocation:'img/portfolio-1.jpg',
-    title:'BlockBreaker',
-    Description:'BlockBreaker is a game that you should break block with ball ,tho game is on autoplay mode'
-  },
-  {
-    imgLocation:'img/portfolio-2.jpg',
-    title:'Ballrun',
-    Description:'you should run up on the wall and does not hit the shackle'
-  },
-  {
-    imgLocation:'img/portfolio-1.jpg',
-    title:'BlockBreaker',
-    Description:'BlockBreaker is a game that you should break block with ball ,tho game is on autoplay mode'
-  }
+  
 ];
  
 //clone of portfolio cards
-CloneMaker("card","contain",5);
+CloneMaker("card","contain",2);
 var cardcover = document.querySelectorAll(".card-cover");
 var title = document.querySelectorAll(".title");
 var description = document.querySelectorAll("#description");
@@ -193,7 +179,7 @@ var skills = [
   title:"Css",
   icon_1:"fa-brands",
   icon_2:"fa-css3-alt",
-  value:'90%',
+  value:'70%',
 },
 {
   title:"Javascript",
@@ -211,16 +197,26 @@ var skills = [
   title:"C++",
   icon_1:"fa-solid",
   icon_2:"fa-c",
-  value:'55%',
+  value:'85%',
 },
 {
-  title:"php",
+  title:"PHP",
   icon_1:"fa-brands",
   icon_2:"fa-php",
-  value:'40%',
+  value:'70%',
+},{
+  title:"Batch",
+  icon_1:"fa-brands",
+  icon_2:"fa-unity",
+  value:"70%",
+},{
+  title:"C#",
+  icon_1:"fa-brands",
+  icon_2:"fa-unity",
+  value:"40%",
 },
  ];
- CloneMaker("skill","skill-containerMenu",6);
+ CloneMaker("skill","skill-containerMenu",8);
  var skill_title = document.querySelectorAll(".skill-title");//title of progbar
  var skill_icon = document.querySelectorAll(".skill-icon");//icon of progbar
  var value = document.querySelectorAll(".value");//value of progbar
@@ -281,7 +277,16 @@ dropdown.forEach((menu) => {
     serviceIndex++;
  })
 //experience
+
+//Experiences
 var Experience = [
+  {
+    logo:"img/GameJam.jpg",
+    from_date:"1401/012/15",
+    to_date:"1402/04/23",
+    title:"Game Jam 2021",
+    description: "Worked as Game designer / Programmer on Snow-man game with Game Maker 8 engine ",
+  },
   {
     logo:"img/medric-logo.png",
     from_date:"1401/012/15",
@@ -297,7 +302,7 @@ var Experience = [
     description: "I join in sharif game competition with some of my friends to make mobile game our game was about boat that should save people ...",
   },
 ]
-CloneMaker("experience","ex-container",1);
+CloneMaker("experience","ex-container",2);
 var extitle= document.querySelectorAll(".ex-title");
 var exLogo= document.querySelectorAll(".logos");
 var exDescription= document.querySelectorAll(".ex-description");
@@ -313,6 +318,8 @@ Experience.forEach((el) => {
    exIndex++;
 });
 CloneMaker("videos-cover","videos",3);
+
+//videos
 var videos = [
   {
     video_source:"video/MyRecord_20230726180641.mp4",
@@ -324,7 +331,7 @@ var videos = [
     video_source:"video/game.mp4",
     video_title:"game",
     video_des:"destroy block",
-    video_poster:"img/Portfolio-1.jpg",
+    video_poster:"img/BlockBreaker.jpg",
   },
   {
     video_source:"video/MyRecord_20230726180641.mp4",
@@ -336,7 +343,7 @@ var videos = [
     video_source:"video/game.mp4",
     video_title:"gamemaker",
     video_des:"destroy block",
-    video_poster:"img/Portfolio-1.jpg",
+    video_poster:"img/BlockBreaker.jpg",
   },
 ]
 
@@ -358,25 +365,17 @@ videos.forEach((el) => {
   })
   videoIndex++;
 })
-CloneMaker("certificate","certi-container",3);
+CloneMaker("certificate","certi-container",0);
+
+
+//Certificates
 var certificates = [
   {
-    title:"Certificate",
-    imgLocation:"img/download.png",
-  },
-  {
-    title:"unity",
-    imgLocation:"img/unity_cert_new.jpg",
-  },
-  {
-    title:"php",
-    imgLocation:"img/download.png",
-  },
-  {
-    title:"c#",
-    imgLocation:"img/unity_cert_new.jpg",
+    title:"Security Hackathon Certificate",
+    imgLocation:"img/SecurityHackathon-certificate.jpg",
   },
 ]
+
 
 var certificate = document.querySelectorAll(".certificate");
 var certTitle = document.querySelectorAll(".certi-title");
