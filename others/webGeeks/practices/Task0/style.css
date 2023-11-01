@@ -1,0 +1,23 @@
+p{
+    color: orange;
+}
+
+
+body > h1:first-of-type{
+    color: purple;
+}
+
+h1{
+    color: red;
+}
+h2{
+    color: green;
+}
+
+h3{
+    color: white;
+}
+
+body{
+    background-color: blanchedalmond;
+}
