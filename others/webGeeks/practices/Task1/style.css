@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+}
+
+p{
+    color: white;
+}
+
+h1,h2{
+    color: orange;
+}
+
+h3{
+    background-color: red;
+}
+
+li{
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li::before{
+    content: "\2022";
+    /*color: yellow;*/
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    animation: bulletAnimation 1s infinite ease alternate;
+}
+
+ul li:hover{
+    color:red;
+}
+
+@keyframes bulletAnimation{
+    from {color:red;width: 1em;rotate: 0deg;}
+    to {color:yellow;width: 2em;rotate: 360deg;}
+}
