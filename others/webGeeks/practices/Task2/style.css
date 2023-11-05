@@ -1,0 +1,14 @@
+p{
+    white-space: pre-wrap;
+    width: 25%;
+    padding: 10px;
+}
+
+#text1{
+    background-color: black;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
