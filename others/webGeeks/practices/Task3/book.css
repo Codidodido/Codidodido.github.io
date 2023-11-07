@@ -1,0 +1,67 @@
+body{
+    background-color: gray;
+}
+
+.paper{
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px 10px;
+    transition: 0.5s;
+}
+
+.paper p{
+    white-space:pre-wrap;
+    line-height: 25px;
+}
+
+.paper:hover{
+    transform: translate(0px,-25px) scale(1.1,1.1);
+    opacity: 1;
+    box-shadow: -15px 15px 25px black;
+    transition: 0.5s;
+}
+
+.paper:hover p{
+    transition: 0.5s;
+}
+
+.book{
+    width: 50%;
+    margin: auto;
+}
+
+.cover{
+    border: hidden;
+    border-radius: 25px;
+    background-image: linear-gradient(gray,black);
+    padding: 10px;
+    margin: auto;
+}
+
+.cover img{
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.cover h1 {
+    color: white;
+    text-align: center;
+    animation: colorChanger 5s ease both infinite;
+}
+
+@keyframes colorChanger {
+    0% {
+        color: white;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: white;
+    }
+}
