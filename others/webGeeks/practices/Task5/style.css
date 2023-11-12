@@ -1,0 +1,59 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.head h1{
+    color:red;
+}
+
+#mod-button{
+    background: transparent;
+    border:none;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: max-content;
+    height: max-content;
+}
+
+#mod-button:hover{
+    transform: scale(1.2) translate(-20px,0px);
+    transition: 0.5s;
+}
+
+#mod-button:active {
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.text {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.icons {
+    position: fixed;
+    bottom: 25px;
+    left: 50px;
+    transform: translateX(-50%);
+}
+
+#telegram-icon{
+    font-size:64px;
+    color:blue;
+    background-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 5px 0px 15px black;
+}
+
+#telegram-icon:hover{
+    transform: rotate(360deg) scale(1.1);
+    color:gold;
+    box-shadow: 10px 0px 25px black;
+    transition: 0.5s;
+}
