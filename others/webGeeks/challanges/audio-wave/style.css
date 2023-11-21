@@ -1,0 +1,78 @@
+.audio-wave1{
+  position:fixed;
+  top:50%;
+  /*margin-top: 2rem ;*/
+}
+
+.audio-wave1 div{
+    display:block;
+    bottom:0px;
+    width: 9px;
+    height: 5px;
+    margin: 10px;
+    background:#9b59b6;
+    position:absolute;
+    animation: anim 2.5s infinite ease-in-out;
+    border-radius: 25px;
+}
+
+.audio-wave1 div:nth-child(1){
+  left: 11px;
+}
+
+.audio-wave1 div:nth-child(2){
+  animation-delay: .2s;
+  left: 22px;
+}
+
+.audio-wave1 div:nth-child(3){
+  animation-delay: .4s;
+  left: 33px;
+}
+
+.audio-wave1 div:nth-child(4){
+  animation-delay: .6s;
+  left: 44px;
+}
+
+.audio-wave1 div:nth-child(5){
+  animation-delay: .8s;
+  left: 55px;
+}
+
+.audio-wave1 div:nth-child(6){
+  animation-delay: 1.0s;
+  left: 66px;
+}
+
+.audio-wave1 div:nth-child(7){
+  animation-delay: 1.2s;
+  left: 77px;
+}
+
+.audio-wave1 div:nth-child(8){
+  animation-delay: 1.4s;
+  left: 88px;
+}
+
+.audio-wave1 div:nth-child(9){
+  animation-delay: 1.6s;
+  left: 99px;
+}
+
+.audio-wave1 div:nth-child(10){
+  animation-delay: 1.8s;
+  left: 110px;
+}
+
+@keyframes anim{
+  0%{background-color: blue;height: 5px;transform: translateY(0px);}
+  25%{background-color: purple;height: 80px;transform: translateY(40px);}
+  50%{background-color: red;height: 5px;transform: translateY(0px);}
+  75%{background-color: gold;height: 40px;transform: translateY(20px);}
+  100%{background-color: blue;height: 5px;transform: translateY(0px);}
+}
+
+@keyframes jagh{
+  
+}
