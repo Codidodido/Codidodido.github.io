@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-image: linear-gradient(-10deg,rgb(213, 193, 65),rgb(213, 37, 60));
+    width: 100%;
+    height: 900px;
+}
+
+.main{
+    position: absolute;
+    left: 24%; top:3%;
+    width: 50%;
+    height: 650px;
+    background-image: linear-gradient(-10deg,rgb(213, 37, 60),  rgb(213, 193, 65));
+    border-radius: 50%;   
+    border: 1px solid rgb(255, 98, 0);
+    box-shadow: 1px 1px 10px black;
+}
+.title{
+    position: absolute;
+    top: 8%; left: 35%;
+    border-radius: 50%;
+    padding: 10px;
+}
+    /*.line{
+        position: absolute;
+        left: 35%; top:10%;
+      
+    }
+    */
+#Infix{
+    position: absolute;
+    left:37.5%; top: 16%;
+    width: 20%;
+    height:30px;
+    text-align: center;
+    background-color:rgb(53, 178, 240);
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    
+    }
+.posfix{
+    position: absolute;
+    left:53%; top: 25%;
+    width: 20%;
+    height:30px;
+    text-align: center;
+    background-color: rgb(220, 57, 20);
+    transition: 1s;
+    
+}
+.posfix:hover{
+    background-color: rgb(212, 195, 47);
+    transform: rotate(-360deg);
+    transition: 2s;
+}
+.perfix{
+    position: absolute;
+    left:23%; top: 25%;
+    width: 20%;
+    height:30px;
+    text-align: center;
+    background-color: rgb(220, 57, 20);
+        transition: 1s;
+}
+.perfix:hover{
+    background-color: rgb(212, 195, 47);
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+#Result{
+
+    position: absolute;
+    left:37.5%; top: 38%;
+    width: 20%;
+    height:30px;
+    text-align: center;
+    background-color:rgb(53, 178, 240);
+    padding: 4px;
+}
+
+@media screen and (max-width: 900px){
+
+    body{
+        background-image: linear-gradient(-10deg,rgb(213, 193, 65),rgb(213, 37, 60));
+        width: 100%;
+        height:1000px;
+    }
+    .main{
+        position: absolute;
+        left: 24%; top:3%;
+        width: 58%;
+        height: 400px;
+        background-image: linear-gradient(-10deg,rgb(213, 37, 60),  rgb(213, 193, 65));
+        border-radius: 50%;   
+        border: 1px solid rgb(255, 98, 0);
+        box-shadow: 1px 1px 10px black;
+    }
+    .title{
+        position: absolute;
+    top: 5%; left: 28%;
+    border-radius: 50%;
+    padding: 10px;
+    
+    }
+    .posfix{
+        position: absolute;
+        left:53%; top: 28%;
+        width: 40%;
+        height: 30px;
+        text-align: center;
+        background-color: rgb(220, 57, 20);
+        transition: 1s;
+        
+    }
+    .posfix:hover{
+        background-color: rgb(212, 195, 47);
+        transform: rotate(-360deg);
+        transition: 2s;
+    }
+    .perfix{
+        position: absolute;
+        left: 12%; top: 28%;
+        width: 40%;
+        height: 30px;
+        text-align: center;
+        background-color: rgb(220, 57, 20);
+            transition: 1s;
+    }
+    .perfix:hover{
+        background-color: rgb(212, 195, 47);
+        transform: rotate(360deg);
+        transition: 2s;
+    }    
+    #Result{
+
+        position: absolute;
+        left:37.5%; top: 43%;
+        width: 20%;
+        height:30px;
+        text-align: center;
+        background-color:rgb(53, 178, 240);
+        padding: 4px;
+    }
+
+}
+@media screen and (max-width: 600px){
+    
+
+      body{
+        background-image: linear-gradient(-10deg,rgb(213, 193, 65),rgb(213, 37, 60));
+        width: 100%;
+        height:650px;
+    }
+    .main{
+        position: absolute;
+        left: 2%;   top:10%;
+        width:97%;
+        height: 300px;
+        background-image: linear-gradient(-10deg,rgb(213, 37, 60),  rgb(213, 193, 65));
+        border-radius: 50%;   
+        border: 1px solid rgb(255, 98, 0);
+        box-shadow: 1px 1px 10px black;
+    }
+    .title{
+        position: absolute;
+    top: 8%; left: 26%;
+    border-radius: 50%;
+    width: 50%;
+    padding: 10px;
+    }
+    #Infix{
+        position: absolute;
+        left:24%; top: 24%;
+        width: 50%;
+        height:30px;
+        text-align: center;
+        background-color:rgb(53, 178, 240);
+        border: 1px solid rgb(0, 0, 0);
+        color: white;
+        
+        
+        }
+    .posfix{
+        position: absolute;
+        left:48%; top: 38%;
+        width: 40%;
+        height: 30px;
+        text-align: center;
+        background-color: rgb(220, 57, 20);
+        transition: 1s;
+        
+    }
+    .posfix:hover{
+        background-color: rgb(212, 195, 47);
+        transform: rotate(-360deg);
+        transition: 2s;
+    }
+    .perfix{
+        position: absolute;
+        left: 7%; top: 38%;
+        width: 40%;
+        height: 30px;
+        text-align: center;
+        background-color: rgb(220, 57, 20);
+            transition: 1s;
+    }
+    .perfix:hover{
+        background-color: rgb(212, 195, 47);
+        transform: rotate(360deg);
+        transition: 2s;
+    }    
+    #Result{
+
+        position: absolute;
+        left:20%; top: 59%;
+        width: 60%;
+        height:30px;
+        text-align: center;
+        background-color:rgb(53, 178, 240);
+        padding: 4px;
+    }
+}
